@@ -19,3 +19,16 @@ testRegex: ".*\\..*spec\\.ts$",
 transform: {
     "^.+\\.(t|j)sx?$": "@swc/jest",
 },
+
+### 3
+
+adding powerlevel10k as zsh theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+in ~/.zshrc:
+ZSH_THEME="powerlevel10k/powerlevel10k"
+alias dockerdeleteall="docker rm -vf $(docker ps -a -q)"
+alias dockerstopall="docker stop $(docker ps -a -q)"
+alias k="kubectl"
+alias repoinit="commitizen init cz-conventional-changelog --save-dev --save-exact"
+[[! -f ~/.p10k.zsh]] || source ~/.p10k.zsh
