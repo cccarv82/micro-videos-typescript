@@ -16,7 +16,8 @@
   // "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "workspaceFolder": "/home/node/app",
   "features": {
-    // "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/java:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
       "plugins": "git git-flow F-Sy-H zsh-autosuggestions zsh-completions",
@@ -42,7 +43,8 @@
         "humao.rest-client",
         "rangav.vscode-thunder-client",
         "redhat.vscode-yaml",
-        "vivaxy.vscode-conventional-commits"
+        "vivaxy.vscode-conventional-commits",
+        "SonarSource.sonarlint-vscode"
       ]
     }
   }
@@ -60,7 +62,7 @@
   // "shutdownAction": "none",
 
   // Uncomment the next line to run commands after the container is created.
-  // "postCreateCommand": "cat /etc/os-release",
+  // "postCreateCommand": "git config --global commit.gpgsign false"
 
   // Configure tool-specific properties.
   // "customizations": {},
