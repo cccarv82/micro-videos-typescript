@@ -32,3 +32,5 @@ alias dockerstopall="docker stop $(docker ps -a -q)"
 alias k="kubectl"
 alias repoinit="commitizen init cz-conventional-changelog --save-dev --save-exact"
 [[! -f ~/.p10k.zsh]] || source ~/.p10k.zsh
+
+\*\*\* zhs já adicionado e configurado na criação do container

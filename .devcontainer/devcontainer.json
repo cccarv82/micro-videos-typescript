@@ -15,6 +15,7 @@
   // connected. This is typically a file mount in .devcontainer/docker-compose.yml
   // "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "workspaceFolder": "/home/node/app",
+
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/java:1": {},
@@ -26,6 +27,7 @@
     "ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {},
     "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
   },
+
   "customizations": {
     "vscode": {
       "extensions": [
@@ -46,7 +48,13 @@
         "redhat.vscode-yaml",
         "vivaxy.vscode-conventional-commits",
         "SonarSource.sonarlint-vscode"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": { "path": "/bin/zsh" }
+        }
+      }
     }
   },
 
