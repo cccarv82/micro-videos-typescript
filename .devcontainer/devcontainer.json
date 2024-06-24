@@ -73,7 +73,7 @@
   // Uncomment the next line to run commands after the container is created.
   // "postCreateCommand": "git config --global commit.gpgsign false"
   "postStartCommand": "git config --global commit.gpgsign false",
-  "postAttachCommand": "chmod +x ./.devcontainer/initialConfig.sh && ./.devcontainer/initialConfig.sh"
+  "postAttachCommand": "chmod +x ./.devcontainer/extras/initialConfig.sh && ./.devcontainer/extras/initialConfig.sh"
 
   // Configure tool-specific properties.
   // "customizations": {},
