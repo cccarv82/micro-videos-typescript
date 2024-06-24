@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
 {
-  "name": "micro-videos typescript",
+  "name": "micro-videos - typescript",
 
   // Update the 'dockerComposeFile' list if you have more compose files or use different names.
   // The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
@@ -16,7 +16,7 @@
   // "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "workspaceFolder": "/home/node/app",
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {},
+    // "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
       "plugins": "git git-flow F-Sy-H zsh-autosuggestions zsh-completions",
