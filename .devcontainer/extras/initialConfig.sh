@@ -13,3 +13,5 @@ echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> ~/.zshrc
 sed -i 's/^ZSH_THEME="devcontainers"$/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 
 cp .devcontainer/extras/.p10k.zsh ~/.p10k.zsh
+
+echo 'alias repoinit="commitizen init cz-conventional-changelog --save-dev --save-exact"' >> ~/.zshrc
