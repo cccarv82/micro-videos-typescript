@@ -5,6 +5,8 @@ RUN apt update && apt install -y --no-install-recommends \
     ca-certificates \
     gnupg2
 
+RUN git config --global commit.gpgsign false
+
 USER node
 
 WORKDIR /home/node/app
