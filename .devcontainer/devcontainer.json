@@ -41,7 +41,8 @@
         "mohsen1.prettify-json",
         "humao.rest-client",
         "rangav.vscode-thunder-client",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "vivaxy.vscode-conventional-commits"
       ]
     }
   }
