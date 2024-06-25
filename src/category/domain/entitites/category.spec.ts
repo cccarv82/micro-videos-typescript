@@ -70,16 +70,19 @@ describe("Category unit tests", () => {
     data.forEach((item) => {
       const category = new Category(item.props, item.id as any);
       expect(category.id).not.toBeNull();
-      expect(category.id).toBeInstanceOf(UniqueEntityID);
+      expect(category.uniqueEntityID).toBeInstanceOf(UniqueEntityID);
     });
   });
 
-  test("getter of name prop", () => {
+  test("getter and setter of name prop", () => {
     const category = new Category({ name: "test1" });
     expect(category.name).toBe("test1");
+
+    category["name"] = "test2";
+    expect(category.name).toBe("test2");
   });
 
-  test("getter of description prop", () => {
+  test("getter and setter of description prop", () => {
     let category = new Category({
       name: "test1",
       description: "test1",
@@ -104,7 +107,7 @@ describe("Category unit tests", () => {
     expect(category.description).toBeNull();
   });
 
-  test("getter of is_active prop", () => {
+  test("getter and setter of is_active prop", () => {
     let category = new Category({
       name: "test1",
       is_active: true,
@@ -133,5 +136,24 @@ describe("Category unit tests", () => {
       created_at,
     });
     expect(category.created_at).toStrictEqual(created_at);
+  });
+
+  it("should update a category", () => {
+    const category = new Category({ name: "test1" });
+    category.update("test2", "test2");
+    expect(category.name).toBe("test2");
+    expect(category.description).toBe("test2");
+  });
+
+  it("should activate a category", () => {
+    const category = new Category({ name: "test1", is_active: false });
+    category.activate();
+    expect(category.is_active).toBeTruthy();
+  });
+
+  it("should deactivate a category", () => {
+    const category = new Category({ name: "test1", is_active: true });
+    category.deactivate();
+    expect(category.is_active).toBeFalsy();
   });
 });

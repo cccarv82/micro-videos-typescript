@@ -48,7 +48,8 @@
         "rangav.vscode-thunder-client",
         "redhat.vscode-yaml",
         "vivaxy.vscode-conventional-commits",
-        "SonarSource.sonarlint-vscode"
+        "SonarSource.sonarlint-vscode",
+        "firsttris.vscode-jest-runner"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
