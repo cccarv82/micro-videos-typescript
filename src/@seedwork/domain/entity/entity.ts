@@ -5,7 +5,7 @@ import UniqueEntityID from "../value-objects/unique-entity-id.vo";
  *
  * @template Props - The type of the entity's properties.
  */
-export default abstract class Entity<Props> {
+export default abstract class Entity<Props = any> {
   /**
    * Unique identifier for the entity.
    */
