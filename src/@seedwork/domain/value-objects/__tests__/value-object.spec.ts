@@ -1,8 +1,17 @@
 import ValueObject from "../value-object";
 
+/**
+ * Stub value object for testing purposes.
+ */
 class StubValueObject extends ValueObject {}
 
+/**
+ * Test suite for the ValueObject class.
+ */
 describe("ValueObject Unit Tests", () => {
+  /**
+   * Tests if the value stored in the ValueObject is set correctly.
+   */
   it("should set value", () => {
     let vo = new StubValueObject("string value");
     expect(vo.value).toBe("string value");
@@ -11,9 +20,13 @@ describe("ValueObject Unit Tests", () => {
     expect(vo.value).toStrictEqual({ prop: "value" });
   });
 
+  /**
+   * Tests if the ValueObject can be converted to a string.
+   */
   it("should convert to string", () => {
+    // Arrange
     const date = new Date();
-    let arrange = [
+    const arrange = [
       { received: "", expected: "" },
       { received: true, expected: "true" },
       { received: false, expected: "false" },
@@ -30,17 +43,24 @@ describe("ValueObject Unit Tests", () => {
       },
     ];
 
+    // Act & Assert
     arrange.forEach((value) => {
       const vo = new StubValueObject(value.received);
       expect(vo + "").toBe(value.expected);
     });
   });
 
+  /**
+   * Tests if the ValueObject is immutable.
+   */
   it("should be a immutable object", () => {
+    // Arrange
     const obj = {
       prop1: "value1",
       deep: { prop2: "value2", prop3: new Date() },
     };
+
+    // Act & Assert
     const vo = new StubValueObject(obj);
     expect(() => {
       (vo as any).value.prop1 = "other value";
